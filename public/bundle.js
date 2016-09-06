@@ -50,7 +50,7 @@
 	    ReactDOM = __webpack_require__(158),
 	    Greeter = __webpack_require__(159);
 
-	var firstName = "Leeloo Multipass";
+	var firstName = "Hector";
 
 	ReactDOM.render(React.createElement(Greeter, { name: firstName }), document.getElementById('app'));
 
