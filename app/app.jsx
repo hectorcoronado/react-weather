@@ -4,7 +4,6 @@ var React = require('react'),
 
 var Main = require('Main');
 
-
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
