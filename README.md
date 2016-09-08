@@ -1,4 +1,4 @@
-# React Boilerplate app
+# React Weather app
 ---
 
 ### React app structured with:
