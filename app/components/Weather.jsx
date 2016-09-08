@@ -1,6 +1,7 @@
 var React = require('react'),
     WeatherForm = require('WeatherForm'),
-    WeatherMessage = require('WeatherMessage');
+    WeatherMessage = require('WeatherMessage'),
+    openWeatherMap = require('openWeatherMap');
 
 var Weather = React.createClass({
   getInitialState: function () {
@@ -12,9 +13,15 @@ var Weather = React.createClass({
 
 
   handleSearch: function (location) {
-    this.setState({
-      location: location,
-      temp: 23
+    var that = this; // so that 'this' binding isn't lost in the promise success function.
+
+    openWeatherMap.getTemp(location).then(function (temp) {
+      that.setState({
+        location: location,
+        temp: temp
+      });
+    }, function (errorMessage) {
+          console.log(errorMessage);
     });
   },
 
