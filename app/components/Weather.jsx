@@ -3,6 +3,10 @@ var React = require('react'),
     WeatherMessage = require('WeatherMessage');
 
 var Weather = React.createClass({
+  handleSearch: function (location) {
+    console.log(location);
+  },
+
   getInitialState: function () {
     return {}
   },
@@ -11,7 +15,7 @@ var Weather = React.createClass({
     return (
       <div>
         <h3>Weather Component</h3>
-        <WeatherForm/>
+        <WeatherForm onSearch={this.handleSearch}/>
         <WeatherMessage/>
       </div>
     );

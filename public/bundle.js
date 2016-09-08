@@ -24933,6 +24933,10 @@
 	var Weather = React.createClass({
 	  displayName: 'Weather',
 
+	  handleSearch: function handleSearch(location) {
+	    console.log(location);
+	  },
+
 	  getInitialState: function getInitialState() {
 	    return {};
 	  },
@@ -24946,7 +24950,7 @@
 	        null,
 	        'Weather Component'
 	      ),
-	      React.createElement(WeatherForm, null),
+	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      React.createElement(WeatherMessage, null)
 	    );
 	  }
@@ -24967,6 +24971,13 @@
 
 	  onFormSubmit: function onFormSubmit(e) {
 	    e.preventDefault();
+
+	    var location = this.refs.location.value;
+
+	    if (location.length > 0) {
+	      this.refs.location.value = '';
+	      this.props.onSearch(location);
+	    }
 	  },
 	  render: function render() {
 	    return React.createElement(
@@ -24975,7 +24986,7 @@
 	      React.createElement(
 	        'form',
 	        { onSubmit: this.onFormSubmit },
-	        React.createElement('input', { type: 'text', placeholder: 'Enter City' }),
+	        React.createElement('input', { type: 'text', ref: 'location', placeholder: 'Enter City' }),
 	        React.createElement(
 	          'button',
 	          null,

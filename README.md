@@ -3,6 +3,7 @@
 
 ### React app structured with:
 
+* OpenWeatherMap.org API
 * React
 * ReactDOM
 * React-Router
