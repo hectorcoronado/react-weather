@@ -1,0 +1,32 @@
+///////////////
+// variables //
+///////////////
+$space-large: 2.5rem;
+$sky: #CAEBF2;
+$carbon: #A9A9A9;
+$red: #FF3B3F;
+$neutral:  #EFEFEF;
+
+
+
+//////////
+// scss //
+//////////
+
+body {
+  background: $neutral;
+}
+
+.page-title {
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+  color: $red;
+}
+
+input[type=search] {
+  box-shadow: none;
+}
+
+.button {
+  background-color: $carbon !important;
+}
