@@ -6,6 +6,9 @@ $sky: #CAEBF2;
 $carbon: #A9A9A9;
 $red: #FF3B3F;
 $neutral:  #EFEFEF;
+$yellow: #FFFF33;
+$archivo: 'Archivo Narrow', sans-serif;
+$fjalla: 'Fjalla One', sans-serif;
 
 
 
@@ -14,19 +17,60 @@ $neutral:  #EFEFEF;
 //////////
 
 body {
-  background: $neutral;
+  background: linear-gradient(316deg, #b2dbbf, #f3ffbd, #fe938c, #70c1b3, #247ba0);
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 9s ease infinite;
+  -moz-animation: AnimationName 9s ease infinite;
+  -o-animation: AnimationName 9s ease infinite;
+  animation: AnimationName 9s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 24%}
+      50%{background-position:100% 77%}
+      100%{background-position:0% 24%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 24%}
+      50%{background-position:100% 77%}
+      100%{background-position:0% 24%}
+  }
+  @-o-keyframes AnimationName {
+      0%{background-position:0% 24%}
+      50%{background-position:100% 77%}
+      100%{background-position:0% 24%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 24%}
+      50%{background-position:100% 77%}
+      100%{background-position:0% 24%}
+  }
+  font-family: $archivo !important;
 }
 
-.page-title {
-  margin-top: $space-large;
-  margin-bottom: $space-large;
-  color: $red;
-}
 
 input[type=search] {
   box-shadow: none;
+  border-radius: 5px;
+  border-color: $red;
+}
+
+
+.page-title {
+  font-family: $fjalla !important;
+  margin-top: $space-large;
+  margin-bottom: $space-large;
+  color: $red;
+
+}
+
+.top-bar {
+  border-top: solid $red 6px;
+  border-bottom: solid $red 6px;
 }
 
 .button {
-  background-color: $carbon !important;
+  background-color: $sky;
+  border-radius: 5px;
+  border-color: $yellow;
 }
