@@ -10,4 +10,3 @@
 * Webpack
 * Babel
 * Express
-* Nodemon
