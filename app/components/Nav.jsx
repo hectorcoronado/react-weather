@@ -19,7 +19,7 @@ var Nav = React.createClass({
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
-            <li className="menu-text">ANTHROPOGENIC THERMAL MAXIMUM</li>
+            <li className="menu-text"><span><a href="http://climate.nasa.gov/evidence/" target="_blank">ANTHROPOGENIC</a></span> <span><a href="http://www.pik-potsdam.de/~stefan/Publications/Book_chapters/Rahmstorf_Zedillo_2008.pdf" target="_blank">THERMAL</a></span> <span><a href="http://www.scientificamerican.com/article/seven-answers-to-climate-contrarian-nonsense/" target="_blank">MAXIMUM</a></span></li>
             <li>
               <IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Get Weather</IndexLink>
             </li>
