@@ -1,7 +1,10 @@
-# React Weather app
+# ANTHROPOGENIC THERMAL MAXIMUM
+---
+https://anthropogenicthermalmaximum.herokuapp.com/
+
 ---
 
-### React app structured with:
+### React weather app structured with:
 
 * OpenWeatherMap.org API
 * React
